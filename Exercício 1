@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main(){
+
+
+    int matriz[2][2], matrizR[2][2];
+    int i,j;
+    int maior=0;
+    for(i=0;i<2;i++){
+    
+        for(j=0;j<2;j++){
+        
+            printf("Digite o Elemento[%d][%d]: ", i,j);
+            scanf("%d", &matriz[i][j]);
+            if(maior < matriz[i][j]){
+            
+              maior = matriz[i][j];
+   }
+        }
+    }
+    printf("========================================================");
+
+     for(i=0;i<2;i++){
+    
+        for(j=0;j<2;j++){
+        
+            matrizR[i][j] = maior * matriz[i][j];
+        }
+    }
+    printf("\n");
+printf("\n O Resultado da multiplicação dos números inseridos na Matriz pelo seu maior elemento ( %d ) é:", maior);
+          printf("\n");
+          printf("\n");
+               
+     for(i=0;i<2;i++){
+    
+        for(j=0;j<2;j++){
+        
+           printf("\nMatrizR[%d][%d]: %d", i, j, matrizR[i][j]);
+        }
+    }
+
+ return 0;
+}

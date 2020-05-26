@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main(){
+
+
+    int matriz[8][8];
+    int i,j;
+
+    for(i=0;i<8;i++)
+    {
+        for(j=0;j<8;j++)
+        {
+            printf("Digite o Elemento [%d][%d]: ", i,j);
+            scanf("%d", &matriz[i][j]);
+
+        }
+    }
+
+    int simetrico=1;
+   
+    for(i=0;i<8;i++){
+    
+        for(j=0;j<8;j++){
+        
+            if(matriz[i][j] != matriz[j][i]){
+            
+             simetrico=0;
+            }
+        }
+    }
+    printf("===============================================");
+    printf("\n");
+
+    if(simetrico==1){
+    
+         printf("\n");
+        printf("A matriz É simétrica");
+    }
+    else{
+    
+         printf("\n");
+        printf("A matriz NÃO é simétrica");
+    }
+
+
+
+    return 0;
+}

@@ -1,0 +1,44 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(){
+
+  int matriz[4][7], menor, maior, i, j, linhaM, coluna;
+  for (i=0;i<4;i++){
+    
+        for (j=0;j<7;j++){
+        
+            printf("Digite o Elemento[%d][%d]: ", i,j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+	menor = matriz[0][0];
+	linhaM = 0;
+	for (i=0;i<4;i++){
+    
+        for (j=0;j<7;j++){
+        
+            if (matriz[i][j] < menor){
+            
+                menor = matriz[i][j];
+                linhaM = i;
+            }
+        }
+    }
+	maior = matriz[linhaM][0];
+	coluna = 0;
+	for (j=0;j<7;j++){
+		  if (matriz[linhaM][j] > maior){
+				 
+				     maior = matriz[linhaM][j];
+					 coluna = j;
+				 }
+		}
+  printf("=======================================================");
+  printf("\n");	
+  printf("\nO Elemento MINMAX é o valor: %d", maior);
+  printf("\nEstá na Linha %d Coluna %d", linhaM, coluna);
+
+  return 0;
+	
+}
